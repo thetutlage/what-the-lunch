@@ -1,0 +1,7 @@
+<div class="mb-10 relative">
+  <label for="{{ name }}" class="block text-grey-dark text-sm font-bold mb-2"> {{ label }} </label>
+  <input type="file" name="{{ name }}" />
+  @if(hasErrorFor(name))
+    <span class="text-red text-xs mt-2 block absolute"> {{ getErrorFor(name) }} </span>
+  @endif
+</div>

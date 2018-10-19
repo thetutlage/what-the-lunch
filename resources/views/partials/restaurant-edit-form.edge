@@ -1,0 +1,66 @@
+<div class="mt-10 bg-white shadow px-8 py-10 rounded">
+  <form action="{{ route('RestaurantController.update', { id: restaurant.id }) }}?_method=PUT" method="POST" enctype="multipart/form-data">
+    {{-- To keep forms safe from unwanted submissions from unknown sources --}}
+    {{ csrfField() }}
+
+    {{-- Asking for the restaurant name --}}
+    @!component('components.input',
+      name = 'name',
+      value = restaurant.name,
+      label = 'Restaurant Name',
+      flashMessages = flashMessages
+    )
+
+    {{-- Asking for the restaurant address --}}
+    @!component(
+      'components.input',
+      name = 'address',
+      value = restaurant.address,
+      label = 'Address',
+      flashMessages = flashMessages
+    )
+
+    {{-- Asking for restaurant min and max pricing --}}
+    @!component('components.inputGroup', {
+      label: 'Pricing',
+      inputs: [
+        { name: 'min_price', placeholder: 'Minimum Price', dataId: 'amount', value: restaurant.min_price },
+        { name: 'max_price', placeholder: 'Maximum Price', dataId: 'amount', value: restaurant.max_price }
+      ],
+      flashMessages: flashMessages
+    })
+
+    {{-- Asking for restaurant opening and closing time --}}
+    @!component('components.inputGroup', {
+      label: 'Timings',
+      inputs: [
+        { name: 'opens_at', placeholder: 'Opening', dataId: 'timing', value: restaurant.opens_at },
+        { name: 'closes_at', placeholder: 'Closing', dataId: 'timing', value: restaurant.closes_at }
+      ],
+      flashMessages: flashMessages
+    })
+
+    {{-- Optionally define the website URL (if any) --}}
+    @!component('components.input',
+      name = 'url',
+      value = restaurant.url,
+      label = 'Website',
+      flashMessages = flashMessages
+    )
+
+    {{-- Time to upload the cover image --}}
+    <div class="relative cover-image-wrapper" data-id="parent">
+      <div class="cover-image mb-10">
+        <a href="" class="absolute bg-darker-layer px-3 py-2 font-medium tracking-wide text-xs rounded pin-r pin-t-10 mr-3 text-white no-underline" data-action="toggleParent"> Change cover image </a>
+        <img src="{{ route('ImageController.show', { slug: restaurant.cover_image }) }}" alt="">
+      </div>
+      <div class="cover-image-input">
+        @!component('components.file', name = 'cover_image', label = 'Cover Image', flashMessages = flashMessages)
+      </div>
+    </div>
+
+    <div>
+      <button class="appearance-none bg-blue-darker w-full py-3 text-blue-lightest rounded"> Update restaurant </button>
+    </div>
+  </form>
+</div>

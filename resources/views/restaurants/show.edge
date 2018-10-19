@@ -1,0 +1,39 @@
+@layout('layouts.master')
+
+@section('content')
+  <section>
+    @include('partials.restaurant-cover')
+  </section>
+
+  <section class="py-20">
+    <div class="container mx-auto">
+      <div class="flex justify-between">
+        <div>
+            @!component('components.restaurant-attribute',
+              icon = 'location-pin',
+              value = restaurant.address
+            )
+
+            @!component('components.restaurant-attribute',
+              icon = 'money-bag',
+              value = restaurant.min_price + ' - ' + restaurant.max_price
+            )
+
+            @!component('components.restaurant-attribute',
+              icon = 'clock-time',
+              value = restaurant.opens_at + ' - ' + restaurant.closes_at
+            )
+
+            @component('components.restaurant-attribute',
+              icon = 'link-alt',
+              value = restaurant.url
+            )
+              <a href="{{ restaurant.url }}" target="_blank" class="text-primary">{{ restaurant.url }}</a>
+            @endcomponent
+        </div>
+
+        @include('partials.visitors-card')
+      </div>
+    </div>
+  </section>
+@endsection

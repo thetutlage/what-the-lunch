@@ -1,0 +1,40 @@
+<div class="bg-white shadow rounded px-10 py-8 w-1/2">
+  <div class="flex items-center justify-between">
+    <div class="pr-4">
+      <h2 class="text-xl mb-3"> People visited this restaurant </h2>
+      @if(restaurant.visitors.length)
+        <p> Following colleagues of yours have visited this restaurant </p>
+      @else
+        <p> No one has visited this restaurant yet </p>
+      @endif
+    </div>
+
+    @if(auth.user && !findBy(restaurant.visitors, 'id', auth.user.id))
+      <div class="flex-no-shrink">
+        <form action="{{ route('RestaurantVisitorController.store', { id: restaurant.id }) }}" method="POST">
+          {{ csrfField() }}
+          <button
+            type="submit"
+            class="border border-primary text-primary no-underline block px-4 py-2 rounded text-sm"
+          >
+            <span>I have been here</span>
+            <i class="icofont-hand"></i>
+          </button>
+        </form>
+      </div>
+    @endif
+  </div>
+
+  @if(restaurant.visitors.length)
+    <div class="mt-10">
+      @each(visitor in restaurant.visitors)
+        <img
+          src="{{ visitor.avatar }}"
+          alt="{{ visitor.name }}"
+          title="{{ visitor.name }}"
+          class="rounded-full inline-block mr-2 w-avatar-ring {{ visitor.id === auth.user.id ? 'border-2 border-primary' : '' }}"
+        >
+      @endeach
+    </div>
+  @endif
+</div>

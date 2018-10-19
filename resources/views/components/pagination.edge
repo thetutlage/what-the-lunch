@@ -1,0 +1,7 @@
+@each(page in range(1, collection.lastPage + 1))
+  <a href="{{ route('RestaurantController.index') }}?page={{ page }}"
+    class="border no-underline px-2 py-1 rounded mr-2 text-sm {{ page == collection.page ? 'bg-primary text-white' : 'border-primary text-primary' }}"
+  >
+    {{ page }}
+  </a>
+@endeach

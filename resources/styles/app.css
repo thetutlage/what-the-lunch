@@ -1,0 +1,94 @@
+@tailwind preflight;
+@tailwind components;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+*:focus {
+  outline: none;
+}
+
+.dropdown {
+  z-index: 10;
+}
+
+.dropdown > a:before {
+  content: '';
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 6px solid config('colors.primary');
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  margin-top: 1px;
+  transform: translateY(-50%);
+}
+
+.dropdown.active > a:before {
+  transform: translateY(-50%) rotate(180deg);
+}
+
+.dropdown.active ul {
+  display: block;
+}
+
+.text-shadow {
+  text-shadow: 1px 1px 0 rgba(0,0,0,0.35), 1px 1px 5px rgba(0,0,0,0.5);
+}
+
+.cover {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.images-slider img {
+  max-width: initial;
+}
+
+.pin-r-10 {
+  right: 10px;
+}
+
+.pin-t-10 {
+  top: 10px;
+}
+
+.cover-image-wrapper .cover-image-input {
+  display: none;
+}
+
+.cover-image-wrapper.active .cover-image-input {
+  display: block;
+}
+
+.cover-image-wrapper.active .cover-image {
+  display: none;
+}
+
+.notification-banner {
+  max-height: 80px;
+  animation: slideDown 200ms ease 1s forwards;
+  transform: translateY(-80px);
+}
+
+.notification-banner.notification-hidden {
+  animation: slideUp 200ms ease forwards;
+}
+
+@keyframes slideDown {
+  from { transform: translateY(-80px); }
+  to { transform: none; }
+}
+
+@keyframes slideUp {
+  from { transform: none; }
+  to { transform: translateY(-80px); }
+}
+
+@tailwind utilities;

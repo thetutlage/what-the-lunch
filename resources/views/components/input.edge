@@ -1,0 +1,16 @@
+<div class="mb-10 relative">
+  <label for="{{ name }}" class="block text-grey-dark text-sm font-bold mb-2"> {{ label }} </label>
+
+  <input
+    type="text"
+    name="{{ name }}"
+    class="appearance-none rounded w-full py-2 px-3 leading-tight bg-grey"
+    placeholder="{{ placeholder }}"
+    value="{{ old(name, value) }}"
+    data-id="{{ dataId }}"
+  >
+
+  @if(hasErrorFor(name))
+    <span class="text-red text-xs mt-2 block absolute"> {{ getErrorFor(name) }} </span>
+  @endif
+</div>

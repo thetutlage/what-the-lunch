@@ -1,0 +1,17 @@
+@layout('layouts.master')
+
+@section('content')
+  <section>
+    <div class="container mx-auto">
+      <div class="flex items-center flex-col h-body-full justify-center">
+        <div class="text-center">
+          <h2 class="text-6xl mb-3 text-grey-dark"> Oauth Failed </h2>
+          <p class="text-xl text-grey-dark"> Something went wrong during the Oauth flow. </p>
+          <a class="text-primary border border-primary py-2 px-6 inline-block mt-10 no-underline" href="{{ route('AuthController.redirect') }}">
+            Login again
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+@endsection

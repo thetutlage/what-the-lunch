@@ -1,0 +1,20 @@
+<div class="mb-10">
+  <label class="block text-grey-dark text-sm font-bold mb-2"> {{ label }} </label>
+  <div class="flex justify-between">
+    @each(input in inputs)
+      <div class="relative">
+        <input
+          type="text" name="{{ input.name }}"
+          class="appearance-none rounded w-full py-2 px-3 leading-tight bg-grey"
+          placeholder="{{ input.placeholder }}"
+          value="{{ old(input.name, input.value) }}"
+          data-id="{{ input.dataId }}"
+        >
+
+        @if(hasErrorFor(input.name))
+          <span class="text-red text-xs mt-2 block absolute"> {{ getErrorFor(input.name) }} </span>
+        @endif
+      </div>
+    @endeach
+  </div>
+</div>

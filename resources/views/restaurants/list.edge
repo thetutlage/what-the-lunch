@@ -1,0 +1,14 @@
+@layout('layouts.master')
+
+@section('content')
+  <section class="py-20">
+    <div class="container mx-auto">
+      @include('partials.restaurant-list-heading')
+      @!component('components.restaurants', restaurants = restaurants.data)
+
+      <div class="flex mt-10">
+        @!component('components.pagination', collection = restaurants)
+      </div>
+    </div>
+  </section>
+@endsection

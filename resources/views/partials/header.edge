@@ -1,0 +1,42 @@
+@include('partials.notification')
+
+<header class="bg-white shadow">
+  <div class="container mx-auto">
+    <div class="flex justify-between items-center h-header">
+      <a href="/"><img src="/images/logo.svg" class="block w-logo" /></a>
+
+      @loggedIn()
+        <div class="dropdown relative">
+          <a href=""
+            class="text-primary border border-primary rounded no-underline pl-4 pr-8 py-2 text-sm tracking-wide" data-action="dropdown">
+              Harminder Virk
+          </a>
+
+          <ul class="list-reset bg-white shadow absolute px-6 py-6 pin-r rounded border mt-3 hidden">
+            @!component(
+              'components.dropdownItem',
+              text = '+ Add new restaurant',
+              href = route('RestaurantController.create'))
+
+            @!component(
+              'components.dropdownItem',
+              text = 'My restaurants',
+              href = route('UserRestaurantController.index', { id: auth.user.id }))
+
+            @!component(
+              'components.dropdownItem',
+              text = 'Logout',
+              href = route('AuthController.logout'))
+          </ul>
+        </div>
+      @else
+        <a
+          href="{{ route('AuthController.redirect') }}"
+          class="text-primary border border-primary rounded no-underline px-4 py-2 text-sm tracking-wide">
+            Login
+        </a>
+      @endloggedIn
+
+    </div>
+  </div>
+</header>

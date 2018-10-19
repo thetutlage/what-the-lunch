@@ -1,0 +1,10 @@
+@if(flashMessage('notification'))
+  <div class="bg-green-dark text-green-lightest py-4 fixed pin-x pin-t z-20 notification-banner">
+    <div class="container mx-auto">
+      <div class="flex items-center">
+        <i class="icofont-check-circled text-3xl text-green-lightest mr-3"></i>
+        <span class="mt-1">{{ flashMessage('notification') }}</span>
+      </div>
+    </div>
+  </div>
+@endif

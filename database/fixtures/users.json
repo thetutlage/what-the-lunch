@@ -1,0 +1,17 @@
+[
+  {
+    "name": "Joshua Lüdeker",
+    "email": "joshua.luedeker@aboutyou.de",
+    "avatar": "https://www.xing.com/image/9_d_2_421808b2c_20416500_7/joshua-l%C3%BCdeker-foto.1024x1024.jpg"
+  },
+  {
+    "name": "Ali Jabir",
+    "email": "ali.jabir@aboutyou.de",
+    "avatar": "https://res.cloudinary.com/adonisjs/image/upload/q_100/v1539891386/ali-jabir.jpg"
+  },
+  {
+    "name": "Harminder Virk",
+    "email": "harminder.virk@aboutyou.de",
+    "avatar": "https://en.gravatar.com/userimage/25417541/1341dc3e802041059d91c08b14a448e5.png"
+  }
+]

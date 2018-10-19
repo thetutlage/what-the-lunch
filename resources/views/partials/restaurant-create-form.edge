@@ -1,0 +1,46 @@
+<div class="mt-10 bg-white shadow px-8 py-10 rounded">
+  <form action="{{ route('RestaurantController.store') }}" method="POST" enctype="multipart/form-data">
+    {{-- To keep forms safe from unwanted submissions from unknown sources --}}
+    {{ csrfField() }}
+
+    {{-- Asking for the restaurant name --}}
+    @!component('components.input',
+      name = 'name',
+      label = 'Restaurant Name',
+      flashMessages = flashMessages
+    )
+
+    {{-- Asking for the restaurant address --}}
+    @!component('components.input', name = 'address', label = 'Address', flashMessages = flashMessages)
+
+    {{-- Asking for restaurant min and max pricing --}}
+    @!component('components.inputGroup', {
+      label: 'Pricing',
+      inputs: [
+        { name: 'min_price', placeholder: 'Minimum Price', dataId: 'amount' },
+        { name: 'max_price', placeholder: 'Maximum Price', dataId: 'amount' }
+      ],
+      flashMessages: flashMessages
+    })
+
+    {{-- Asking for restaurant opening and closing time --}}
+    @!component('components.inputGroup', {
+      label: 'Timings',
+      inputs: [
+        { name: 'opens_at', placeholder: 'Opening', dataId: 'timing' },
+        { name: 'closes_at', placeholder: 'Closing', dataId: 'timing' }
+      ],
+      flashMessages: flashMessages
+    })
+
+    {{-- Optionally define the website URL (if any) --}}
+    @!component('components.input', name = 'url', label = 'Website', flashMessages = flashMessages)
+
+    {{-- Time to upload the cover image --}}
+    @!component('components.file', name = 'cover_image', label = 'Cover Image', flashMessages = flashMessages)
+
+    <div>
+      <button class="appearance-none bg-blue-darker w-full py-3 text-blue-lightest rounded"> Add restaurant </button>
+    </div>
+  </form>
+</div>

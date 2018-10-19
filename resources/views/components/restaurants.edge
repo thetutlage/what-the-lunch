@@ -1,0 +1,15 @@
+<div class="flex flex-wrap">
+  @each(restaurant in restaurants)
+    <div class="w-1/4 pr-4 mb-4">
+      @!component('components.restaurant', { restaurant })
+    </div>
+  @else
+    <div class="text-center px-32 py-20">
+      <i class="icofont-restaurant text-6xl"></i>
+      <h2 class="my-4 text-3xl text-grey-dark"> That's all for the day! </h2>
+      <p class="text-lg leading-normal text-grey-dark">
+        You have reached the end of the restaurants list. If there aren't any restaurants at all, then please consider <a href="{{ route('RestaurantController.create') }}" class="text-primary">adding one</a> and share it with your collageous.
+      </p>
+    </div>
+  @endeach
+</div>

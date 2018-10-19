@@ -1,0 +1,8 @@
+@if(value)
+  <p class="text-lg text-grey-dark mb-3 flex">
+    <i class="icofont-{{ icon }} text-indigo-dark w-6"></i>
+    @yield($slot.main)
+      <span>{{ value }}</span>
+    @endyield
+  </p>
+@endif

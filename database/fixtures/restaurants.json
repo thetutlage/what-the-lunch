@@ -1,0 +1,142 @@
+[
+  {
+    "name": "Apples Restaurant & Bar Hamburg",
+    "address": "Bugenhagenstraße 8, 20095 Hamburg",
+    "url": "http://apples-restaurant.de",
+    "cover_image": "hyat.webp",
+    "opens_at": "12:00",
+    "closes_at": "14:30",
+    "min_price": 900,
+    "max_price": 4900
+  },
+  {
+    "name": "Restaurante Español Picasso",
+    "address": "Rathausstraße 14, 20095 Hamburg",
+    "url": "http://www.picasso-hamburgo.de",
+    "cover_image": "picasso-hamburgo.jpg",
+    "opens_at": "11:30",
+    "closes_at": "23:00",
+    "min_price": 700,
+    "max_price": 2990
+  },
+  {
+    "name": "O-Ren Ishii",
+    "address": "Kleine Reichenstraße 18, 20457 Hamburg",
+    "url": "http://www.o-ren-ishii.com",
+    "cover_image": "o-ren-ishii.jpg",
+    "opens_at": "11:00",
+    "closes_at": "18:00",
+    "min_price": 900,
+    "max_price": 3200
+  },
+  {
+    "name": "VLET an der Alster",
+    "address": "Jungfernstieg 7, 20354 Hamburg",
+    "url": "http://vlet-alster.de",
+    "cover_image": "vlet-alster.jpg",
+    "opens_at": "11:00",
+    "closes_at": "23:59",
+    "min_price": 900,
+    "max_price": 3200
+  },
+  {
+    "name": "Food Sky Europapassage",
+    "address": "Ballindamm 40/Ballindamm, 20095 Hamburg",
+    "url": "http://m.europa-passage.de",
+    "cover_image": "food-sky.jpg",
+    "opens_at": "10:00",
+    "closes_at": "20:00",
+    "min_price": 490,
+    "max_price": 4000
+  },
+  {
+    "name": "BLOCK HOUSE Jungfernstieg",
+    "address": "Jungfernstieg 1, 20095 Hamburg",
+    "url": "http://block-house.de",
+    "cover_image": "block-house.jpg",
+    "opens_at": "11:30",
+    "closes_at": "23:59",
+    "min_price": 300,
+    "max_price": 2350
+  },
+  {
+    "name": "Estancia Steaks",
+    "address": "Große Reichenstraße 27, 20457 Hamburg",
+    "url": "http://estancia-steaks.com",
+    "cover_image": "estancia-steaks.jpg",
+    "opens_at": "12:00",
+    "closes_at": "15:00",
+    "min_price": 500,
+    "max_price": 4750
+  },
+  {
+    "name": "Bistro Restaurant TeoLino",
+    "address": "Karolinenstraße 6, 20357 Hamburg",
+    "url": "",
+    "cover_image": "bistro.jpg",
+    "opens_at": "11:30",
+    "closes_at": "15:00",
+    "min_price": 1990,
+    "max_price": 2490
+  },
+  {
+    "name": "MUTTERLAND Cölln's",
+    "address": "Brodschrangen 1-5, 20457 Hamburg",
+    "url": "http://coellns.de",
+    "cover_image": "coellns.jpg",
+    "opens_at": "09:00",
+    "closes_at": "23:00",
+    "min_price": 240,
+    "max_price": 2900
+  },
+  {
+    "name": "Mama Trattoria Hamburg City",
+    "address": "Schauenburgerstraße 44, 20095 Hamburg",
+    "url": "http://mama.eu",
+    "cover_image": "mama.jpg",
+    "opens_at": "11:30",
+    "closes_at": "23:30",
+    "min_price": 390,
+    "max_price": 4490
+  },
+  {
+    "name": "Prego Restaurant Pizzeria",
+    "address": "Lilienstraße 36, 20095 Hamburg",
+    "url": "http://prego-hh.de",
+    "cover_image": "prego.jpg",
+    "opens_at": "09:00",
+    "closes_at": "23:59",
+    "min_price": 390,
+    "max_price": 7900
+  },
+  {
+    "name": "Urban Foodie",
+    "address": "Großer Burstah 1, 20457 Hamburg",
+    "url": "http://uf-pokebar.de",
+    "cover_image": "uf-pokebar.jpg",
+    "opens_at": "10:00",
+    "closes_at": "21:00",
+    "min_price": 790,
+    "max_price": 1500
+  },
+  {
+    "name": "Ahoi by Steffen Henssler",
+    "address": "Spitalerstraße 12, 20095 Hamburg",
+    "url": "http://ahoibysteffenhenssler.de",
+    "cover_image": "ahoibysteffenhenssler.jpg",
+    "opens_at": "11:30",
+    "closes_at": "21:00",
+    "min_price": 1200,
+    "max_price": 2800
+  },
+  {
+    "name": "Quan Do",
+    "address": "Georgspl. 16, 20099 Hamburg",
+    "url": "http://quan-do.com",
+    "cover_image": "quan-do.jpg",
+    "opens_at": "11:30",
+    "closes_at": "21:30",
+    "min_price": 200,
+    "max_price": 790
+  }
+]

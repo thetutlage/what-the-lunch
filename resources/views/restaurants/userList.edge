@@ -1,0 +1,53 @@
+@layout('layouts.master')
+
+@section('content')
+  <section class="py-20">
+    <div class="container mx-auto">
+      <div class="mb-20">
+        <h2 class="text-3xl mb-3"> My Restaurants </h2>
+        <p class="text-grey-darkest text-lg"> Following is the list of restaurants added by you. </p>
+      </div>
+
+      <div class="flex flex-wrap">
+        @each(restaurant in restaurants)
+          <div class="w-1/2 pr-4 mb-4 h-horizonal-card">
+            <div class="bg-white shadow rounded flex h-full">
+              <div class="w-1/3">
+                <a href="{{ route('RestaurantController.show', { id: restaurant.id }) }}">
+                  <img src="{{ route('ImageController.show', { slug: restaurant.cover_image }) }}" class="h-full w-full rounded-l" />
+                </a>
+              </div>
+              <div class="px-4 py-4 flex flex-col justify-between">
+                <div>
+                  <h2 class="text-xl mb-2"> {{ restaurant.name }} </h2>
+                  <p class="text-sm text-grey-dark flex">
+                    <i class="icofont-location-pin text-indigo-dark w-4"></i>
+                    <span>{{ restaurant.address }}</span>
+                  </p>
+                </div>
+
+                <div class="flex">
+                  <a
+                    href="{{ route('RestaurantController.edit', { id: restaurant.id }) }}"
+                    class="mr-3 bg-indigo-darker text-indigo-lightest px-3 py-2 text-xs no-underline rounded"
+                  >
+                    Edit
+                  </a>
+                  <form
+                    action="{{ route('RestaurantController.destroy', { id: restaurant.id }) }}?_method=DELETE"
+                    method="POST"
+                  >
+                    {{ csrfField() }}
+                    <button class="bg-primary text-white px-3 py-2 text-xs no-underline rounded">
+                      Delete
+                    </button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        @endeach
+      </div>
+    </div>
+  </section>
+@endsection

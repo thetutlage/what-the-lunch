@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>{{ title || 'What the lunch' }}</title>
+  {{ style('icofont.min.css') }}
+  {{ style('app') }}
+</head>
+
+<body class="bg-grey-light">
+  <section>
+    @include('partials.header')
+    @!section('content')
+  </section>
+
+  {{ script('https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.js') }}
+  {{ script('https://cdnjs.cloudflare.com/ajax/libs/zepto/1.2.0/zepto.min.js') }}
+  {{ script('https://unpkg.com/cleave.js@1.4.4/dist/cleave.js') }}
+  {{ script('app') }}
+</body>
+</html>

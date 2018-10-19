@@ -1,0 +1,16 @@
+<div class="relative text-white h-card-large overflow-hidden text-shadow">
+  <img
+    src="{{ route('ImageController.show', { slug: restaurant.cover_image }) }}"
+    class="absolute block cover pin-y pin-x"
+  />
+  <div class="bg-dark-layer absolute pin-x pin-y"></div>
+
+  <div class="container mx-auto relative">
+    <div class="absolute bg-darker-layer px-4 py-3 font-medium tracking-wide text-xs rounded pin-r pin-t-10">
+      Suggested by {{ restaurant.submitter.id === auth.user.id ? 'you' : restaurant.submitter.name }}
+    </div>
+    <div class="relative pb-8 h-card-large flex items-end">
+      <h2 class="text-2xl font-bold mb-2"> {{ restaurant.name }} </h2>
+    </div>
+  </div>
+</div>
