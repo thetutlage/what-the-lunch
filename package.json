@@ -7,8 +7,7 @@
   "scripts": {
     "start": "node server.js",
     "test": "node ace test",
-    "build": "tailwind build resources/styles/app.css -c resources/styles/tailwind.js -o public/app.css",
-    "watch": "watch \"npm run build\" resources/styles"
+    "build": "webpack --config webpack.config.js"
   },
   "keywords": [
     "adonisjs",
@@ -35,8 +34,16 @@
     "sqlite3": "^4.0.2"
   },
   "devDependencies": {
+    "cleave.js": "^1.4.4",
+    "css-loader": "^1.0.0",
+    "mini-css-extract-plugin": "^0.4.4",
+    "postcss-loader": "^3.0.0",
+    "style-loader": "^0.23.1",
     "tailwindcss": "^0.6.6",
-    "watch": "^1.0.2"
+    "watch": "^1.0.2",
+    "webpack": "^4.21.0",
+    "webpack-cli": "^3.1.2",
+    "zepto": "^1.2.0"
   },
   "autoload": {
     "App": "./app"
