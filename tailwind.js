@@ -473,6 +473,7 @@ module.exports = {
 
   width: {
     'logo': '215px',
+    'splash-image': '600px',
     'avatar-ring': '56px',
     'auto': 'auto',
     'px': '1px',

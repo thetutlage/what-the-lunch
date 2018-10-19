@@ -6376,6 +6376,10 @@ table {
   width: 215px;
 }
 
+.w-splash-image {
+  width: 600px;
+}
+
 .w-avatar-ring {
   width: 56px;
 }
@@ -12086,6 +12090,10 @@ table {
 
   .sm\:w-logo {
     width: 215px;
+  }
+
+  .sm\:w-splash-image {
+    width: 600px;
   }
 
   .sm\:w-avatar-ring {
@@ -17801,6 +17809,10 @@ table {
     width: 215px;
   }
 
+  .md\:w-splash-image {
+    width: 600px;
+  }
+
   .md\:w-avatar-ring {
     width: 56px;
   }
@@ -23514,6 +23526,10 @@ table {
     width: 215px;
   }
 
+  .lg\:w-splash-image {
+    width: 600px;
+  }
+
   .lg\:w-avatar-ring {
     width: 56px;
   }
@@ -29225,6 +29241,10 @@ table {
 
   .xl\:w-logo {
     width: 215px;
+  }
+
+  .xl\:w-splash-image {
+    width: 600px;
   }
 
   .xl\:w-avatar-ring {
